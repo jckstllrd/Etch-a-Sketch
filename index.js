@@ -21,16 +21,16 @@ function createGrid(dimension) {
       div.style.height = divHeight + "px";
       //   div.textContent = count;
       //   count++;
-      //   setHover(div);
+      div.addEventListener("mouseover", () => {
+        setHover(div);
+      });
       container.appendChild(div);
     }
   }
 }
 
-// function setHover(element) {
-//   element.addEventListener("hover", () => {
-//     element.style.backgroundColor = "black";
-//   });
-// }
+function setHover(element) {
+  element.style.backgroundColor = "black";
+}
 
 createGrid(dimension);
