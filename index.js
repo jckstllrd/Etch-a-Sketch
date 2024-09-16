@@ -2,8 +2,7 @@ const container = document.querySelector(".container");
 
 let dimension = 16;
 const width = 960;
-
-count = 1;
+let count = 1;
 
 function createGrid(dimension) {
   let divWidth = width / dimension;
@@ -13,8 +12,6 @@ function createGrid(dimension) {
       const div = document.createElement("div");
       div.style.width = divWidth + "px";
       div.style.height = divHeight + "px";
-      //   div.textContent = count;
-      //   count++;
       div.addEventListener("mouseover", () => {
         setHover(div);
       });
@@ -32,8 +29,6 @@ function clearGrid() {
   console.log(container.childNodes);
 
   while (container.hasChildNodes()) {
-    console.log("removed");
-
     container.firstChild.remove();
   }
 }
